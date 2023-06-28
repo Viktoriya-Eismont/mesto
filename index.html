@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="./images/logo.svg" alt="Логотип" class="logo">
+    </header>
+
+    <main>
+      <section class="profile">
+        <img src="./images/MyPhoto.jpg" alt="Моя фотография" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__name-edit">
+            <h1 class="profile__title">Эйсмонт Виктория</h1>
+            <button class="profile__edit-button profile_edit_name"></button>
+          </div>
+          <p class="profile__subtitle">Начинающий разработчик</p>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+      <section class="elements">
+        <div class="element">
+          <img src="./images/Krim.jpg" alt="Крым" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Крым</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/Kislovodsk.jpg" alt="Кисловодск" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Кисловодск</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/Pskov.jpg" alt="Псков" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Псков</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/Pyatigorsk.jpg" alt="Пятигорск" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Пятигорск</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/Sukko.jpg" alt="Сукко" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Сукко</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/Карачаево-Черкесия.png" alt="Карачаево-Черкесия" class="element__foto">
+          <div class="element__group">
+            <h2 class="element__title">Карачаево-Черкесия</h2>
+            <button class="element__like"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">© 2020 Mesto Russia</p>
+    </footer>
+
+    <!-- Попап редактирования ФИО и информации о себе -->
+    <div class="popup popup_type_profile">
+      <form class="popup__content">
+        <button class="popup__close"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input class="popup__name popup_type_name" value="">
+        <input class="popup__about popup_type_about" value="">
+        <button class="popup__save" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
