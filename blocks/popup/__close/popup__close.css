@@ -12,3 +12,11 @@
   position: absolute;
   transform: translate(403px, -75px)
 }
+
+@media screen and (max-width: 767px) {
+  .popup__close {
+    width: 20px;
+    height: 20px;
+    transform: translate(239px, -63px)
+  }
+}
