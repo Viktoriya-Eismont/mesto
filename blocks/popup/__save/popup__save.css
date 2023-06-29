@@ -11,3 +11,14 @@
   text-align: center;
   font-size: 18px;
 }
+
+.popup__save:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__save {
+    font-size: 14px;
+    margin: 45px 0 0;
+  }
+}

@@ -4,6 +4,9 @@
   color: #FFF;
   font-size: 18px;
   font-family: 'Inter', sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1023px) {

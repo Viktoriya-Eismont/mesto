@@ -1,13 +1,13 @@
-const profileEditName = document.querySelector('.profile__edit-button_edit_name');
+const profileEditName = document.querySelector('.profile__edit-button');
 const profileInfo = document.querySelector('.profile__info');
-const popupTypeProfile = document.querySelector('.popup_type_profile');
-const buttonClosePopupEditProfile = popupTypeProfile.querySelector('.popup__close');
-const inputName = popupTypeProfile.querySelector('.popup__name_type_name');
-const inputAbout = popupTypeProfile.querySelector('.popup__about_type_about');
-const profileName = document.querySelector('.profile__name-edit');
-const profileTitle = profileName.querySelector('.profile__title');
+const popupTypeProfile = document.querySelector('.popup');
+const popupContainer = popupTypeProfile.querySelector('.popup__container');
+const buttonClosePopupEditProfile = popupContainer.querySelector('.popup__close');
+const formElement = popupTypeProfile.querySelector('.popup__form');
+const inputName = formElement.querySelector('.popup__name');
+const inputAbout = formElement.querySelector('.popup__about');
+const profileTitle = profileInfo.querySelector('.profile__title');
 const profileSubtitle = profileInfo.querySelector('.profile__subtitle');
-const popupContent = popupTypeProfile.querySelector('.popup__content');
 
 function togglePopup() {
   popupTypeProfile.classList.toggle('popup_opened');
@@ -18,11 +18,15 @@ function togglePopup() {
 profileEditName.addEventListener('click', togglePopup);
 buttonClosePopupEditProfile.addEventListener('click', togglePopup);
 
+function closePopup(){
+  popupTypeProfile.classList.remove('popup_opened');
+};
+
 function handleFormSubmit (evt) {
   evt.preventDefault();
   profileTitle.textContent = inputName.value;
   profileSubtitle.textContent = inputAbout.value;
+  closePopup();
 }
 
-popupContent.addEventListener('submit', handleFormSubmit); 
-
+formElement.addEventListener('submit', handleFormSubmit); 

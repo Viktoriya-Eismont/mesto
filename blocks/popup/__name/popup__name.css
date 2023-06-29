@@ -7,3 +7,9 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 14px;
 }
+
+@media screen and (max-width: 767px) {
+  .popup__name {
+    margin: 75px 0 0;
+  }
+}

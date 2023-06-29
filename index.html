@@ -19,53 +19,53 @@
         <div class="profile__info">
           <div class="profile__name-edit">
             <h1 class="profile__title">Эйсмонт Виктория</h1>
-            <button class="profile__edit-button profile__edit-button_edit_name"></button>
+            <button class="profile__edit-button" aria-label="Редактирование информации о себе" type="button"></button>
           </div>
           <p class="profile__subtitle">Начинающий разработчик</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" aria-label="Добавить" type="button"></button>
       </section>
       <section class="elements">
         <div class="element">
-          <img src="./images/Krim.jpg" alt="Крым" class="element__foto">
+          <img src="./images/Krim.jpg" alt="Крым" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Крым</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img src="./images/Kislovodsk.jpg" alt="Кисловодск" class="element__foto">
+          <img src="./images/Kislovodsk.jpg" alt="Кисловодск" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Кисловодск</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img src="./images/Pskov.jpg" alt="Псков" class="element__foto">
+          <img src="./images/Pskov.jpg" alt="Псков" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Псков</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img src="./images/Pyatigorsk.jpg" alt="Пятигорск" class="element__foto">
+          <img src="./images/Pyatigorsk.jpg" alt="Пятигорск" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Пятигорск</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img src="./images/Sukko.jpg" alt="Сукко" class="element__foto">
+          <img src="./images/Sukko.jpg" alt="Сукко" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Сукко</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
         <div class="element">
-          <img src="./images/Карачаево-Черкесия.png" alt="Карачаево-Черкесия" class="element__foto">
+          <img src="./images/Карачаево-Черкесия.png" alt="Карачаево-Черкесия" class="element__photo">
           <div class="element__group">
             <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button class="element__like"></button>
+            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
           </div>
         </div>
       </section>
@@ -76,14 +76,16 @@
     </footer>
 
     <!-- Попап редактирования ФИО и информации о себе -->
-    <div class="popup popup_type_profile">
-      <form class="popup__content">
-        <button class="popup__close"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <input class="popup__name popup__name_type_name" value="">
-        <input class="popup__about popup__about_type_about" value="">
-        <button class="popup__save" type="submit">Сохранить</button>
-      </form>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close" aria-label="Закрыть окно" type="button"></button>
+        <form class="popup__form">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input class="popup__name" value="" name="FullName">
+          <input class="popup__about" value="" name="InfoAboutUser">
+          <button class="popup__save" type="submit" aria-label="Сохранить изменения">Сохранить</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="./scripts/index.js"></script>

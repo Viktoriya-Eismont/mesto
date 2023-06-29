@@ -4,19 +4,25 @@
   border: none;
   padding: 0;
   background: transparent;
-  background-image: url(../../../images/Close\ Icon.svg);
+  background-image: url(../../../images/CloseIcon.svg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-size: cover;
   outline: none;
   cursor: pointer;
   position: absolute;
-  transform: translate(403px, -75px);
+  top: -40px;
+  right: -40px;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 767px) {
   .popup__close {
     width: 20px;
     height: 20px;
-    transform: translate(239px, -63px);
+    top: -36px;
+    right: 0px;
   }
 }
