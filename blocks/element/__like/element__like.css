@@ -14,8 +14,3 @@
   cursor: pointer;
   opacity: 0.6;
 }
-
-.element__like:active {
-  cursor: pointer;
-  background-image: url(../../../images/Union.svg);
-}

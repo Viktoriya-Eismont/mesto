@@ -26,48 +26,7 @@
         <button class="profile__add-button" aria-label="Добавить" type="button"></button>
       </section>
       <section class="elements">
-        <div class="element">
-          <img src="./images/Krim.jpg" alt="Крым" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Крым</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/Kislovodsk.jpg" alt="Кисловодск" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Кисловодск</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/Pskov.jpg" alt="Псков" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Псков</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/Pyatigorsk.jpg" alt="Пятигорск" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Пятигорск</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/Sukko.jpg" alt="Сукко" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Сукко</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/Карачаево-Черкесия.png" alt="Карачаево-Черкесия" class="element__photo">
-          <div class="element__group">
-            <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
-          </div>
-        </div>
+
       </section>
     </main>
 
@@ -75,19 +34,54 @@
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
 
-    <!-- Попап редактирования ФИО и информации о себе -->
-    <div class="popup">
+    <!-- Попап редактировать профиль -->
+    <div class="popup popup_type_edit">
       <div class="popup__container">
-        <button class="popup__close" aria-label="Закрыть окно" type="button"></button>
-        <form class="popup__form" name="EditProfile">
+        <button class="popup__close popup__close_type_edit" aria-label="Закрыть окно" type="button"></button>
+        <form class="popup__form popup__form_type_edit" name="EditProfile">
           <h2 class="popup__title">Редактировать профиль</h2>
-          <input class="popup__name" value="" name="FullName">
-          <input class="popup__about" value="" name="InfoAboutUser">
+          <input class="popup__name popup__name_edit" value="" name="FullName">
+          <input class="popup__about popup__about_edit" value="" name="InfoAboutUser">
           <button class="popup__save" type="submit" aria-label="Сохранить изменения">Сохранить</button>
         </form>
       </div>
     </div>
   </div>
+
+<!-- Попап добавления карточки -->
+<div class="popup popup_type_add">
+  <div class="popup__container popup__container_add">
+    <button class="popup__close popup__close_type_add" aria-label="Закрыть окно" type="button"></button>
+    <form class="popup__form popup__form_type_add" name="NewPlace">
+      <h2 class="popup__title">Новое место</h2>
+      <input class="popup__name popup__name_add" value="" name="PlaceName" placeholder="Название">
+      <input class="popup__about popup__about_add" value="" name="PlaceLink" placeholder="Ссылка на картинку">
+      <button class="popup__save" type="submit" aria-label="Сохранить изменения">Сохранить</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<!-- Попап просмотра карточки -->
+<div class="popup popup_type_view">
+  <div class="popup__container popup__container_type_view">
+    <button class="popup__close popup__close_type_view" aria-label="Закрыть окно" type="button"></button>
+    <img src="" class="popup__image" alt="">
+    <h2 class="popup__title popup__title_type_view"></h2>
+  </div>
+</div>
+
+  <!-- Заготовка для карточки -->
+  <template id="element-template">
+    <div class="element">
+      <img src="" alt="" class="element__photo">
+      <button class="element__delete" type="button" aria-label="Удалить карточку"></button>
+      <div class="element__group">
+        <h2 class="element__title"></h2>
+        <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

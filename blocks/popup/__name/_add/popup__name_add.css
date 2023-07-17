@@ -1,0 +1,35 @@
+.popup__about_add::placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup__name_add::-webkit-input-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup__name_add::-moz-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup__name_add::-ms-input-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
