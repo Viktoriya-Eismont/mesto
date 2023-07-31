@@ -1,3 +1,13 @@
+function disableSubmitButton(button, config) {
+  button.classList.add(config.disabledButtonClass);
+  button.disabled = true;
+}
+
+function enableSubmitButton(button, config) {
+  button.classList.remove(config.disabledButtonClass);
+  button.disabled = false;
+}
+
 function enableValidation(config) {
   const showInputError = (form, input, config) => {
     input.classList.add(config.inputErrorClass);
@@ -27,11 +37,9 @@ function enableValidation(config) {
 
   const toggleButtonState = (inputs, button) => {
     if(hasInvalidValue(inputs)) {
-      button.classList.add(config.disabledButtonClass);
-      button.disabled = true;
+      disableSubmitButton(button, config);
     } else {
-      button.classList.remove(config.disabledButtonClass);
-      button.disabled = false;
+      enableSubmitButton(button, config);
     }
   }
 
