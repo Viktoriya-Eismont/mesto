@@ -23,7 +23,7 @@ import {
   popupTypeView 
 } from './constants.js';
 
-import FormValidator from './Validate.js';
+import FormValidator from './FormValidator.js';
 
 // Открытие попапов
 function openPopup(popup) {
@@ -66,15 +66,20 @@ function handleProfileFormSubmit (evt) {
   closePopup(popupTypeEdit);
 }
 
-initialCards.forEach((elem) => {
-  const card = new Card(elem.name, elem.link, '#element-template');
-  cardsContainer.append(card.getView());
+function createCard(item) {
+  const cardElement = new Card(item, '#element-template');
+  return cardElement.getView()
+}
+
+initialCards.forEach((item) => {
+  const card = createCard(item, '#element-template');
+  cardsContainer.append(card);
 })
 
 function handleFormSubmitAdd (evt) {
   evt.preventDefault();
-  const newCadrAdd = new Card(inputNameAdd.value, inputAboutAdd.value, '#element-template');
-  cardsContainer.prepend(newCadrAdd.getView());
+  cardsContainer.prepend(createCard({name: inputNameAdd.value, 
+    link: inputAboutAdd.value}, '#element-template'));
   cadrValid.disableSubmitButton()
   formElementAdd.reset();
 

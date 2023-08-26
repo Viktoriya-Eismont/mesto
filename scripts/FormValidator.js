@@ -4,7 +4,7 @@ class FormValidator {
     this._formElem = formElem;
     this._inputs = Array.from(this._formElem.querySelectorAll(this._arr.inputSelector));
     this._button = this._formElem.querySelector(this._arr.submitSaveButtonSelector);
-    this._forms = this._arr.formSelector;
+    this._formSelector = this._arr.formSelector;
     this._disabledButtonClass = this._arr.disabledButtonClass;
     this._inputErrorClass = this._arr.inputErrorClass;
     this._errorrClass = this._arr.errorrClass;
