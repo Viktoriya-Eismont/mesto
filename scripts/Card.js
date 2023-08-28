@@ -8,7 +8,6 @@ class Card {
     this._templateSelector = templateSelector;
     this._newCard = this._getTemplate();
     this._elementLike = this._newCard.querySelector('.element__like');
-    this._newCardPhoto = this._newCard.querySelector('.element__photo');
     this._newCardTitle = this._newCard.querySelector('.element__title');
     this._elementPhoto = this._newCard.querySelector('.element__photo');
     this._elementDelete = this._newCard.querySelector('.element__delete');
@@ -28,8 +27,8 @@ class Card {
   // Вставляем данные в карточку
   _setData() {
     this._newCardTitle.textContent = this._name;
-    this._newCardPhoto.src = this._link;
-    this._newCardTitle.alt = this._name;
+    this._elementPhoto.src = this._link;
+    this._elementPhoto.alt = this._name;
   }
 
   // Открытие попапа с большим фото
@@ -46,7 +45,7 @@ class Card {
   }
 
   // Удалить карточку
-  _removingCard() {
+  _removeCard() {
     this._newCard.remove();
     this._newCard = null;
   }
@@ -57,7 +56,7 @@ class Card {
     
     this._elementLike.addEventListener('click', () => {this._likeCard() });
     
-    this._elementDelete.addEventListener('click', this._removingCard.bind(this));
+    this._elementDelete.addEventListener('click', this._removeCard.bind(this));
   }
 
   getView() {

@@ -54,7 +54,7 @@ function closePopupEsc(evt) {
 }
 
 // Попап редактирование профиля
-function upValue(popup) {
+function fillProfileInputs(popup) {
   inputNameEdit.value = profileTitle.textContent;
   inputAboutEdit.value = profileSubtitle.textContent;
 }
@@ -65,8 +65,8 @@ function handleProfileFormSubmit (evt) {
   profileSubtitle.textContent = inputAboutEdit.value;
   closePopup(popupTypeEdit);
 }
-
-function createCard(item) {
+//, '#element-template
+function createCard(item, templateSelector) {
   const cardElement = new Card(item, '#element-template');
   return cardElement.getView()
 }
@@ -88,7 +88,7 @@ function handleFormSubmitAdd (evt) {
 
 profileEditName.addEventListener('click', () => {
   openPopup(popupTypeEdit);
-  upValue(popupTypeEdit);
+  fillProfileInputs(popupTypeEdit);
 });
 
 buttonClosePopupEdit.addEventListener('click', () => {closePopup(popupTypeEdit);});
