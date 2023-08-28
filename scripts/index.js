@@ -65,7 +65,7 @@ function handleProfileFormSubmit (evt) {
   profileSubtitle.textContent = inputAboutEdit.value;
   closePopup(popupTypeEdit);
 }
-//, '#element-template
+
 function createCard(item, templateSelector) {
   const cardElement = new Card(item, '#element-template');
   return cardElement.getView()
