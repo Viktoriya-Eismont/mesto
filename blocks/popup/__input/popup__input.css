@@ -1,0 +1,52 @@
+.popup__input {
+  width: 100%;
+  margin: 54px 0 0;
+  padding: 0 0 13px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  position: relative;
+}
+
+.popup__input::placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup__input_type_add::-webkit-input-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.opup__input::-moz-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup__input::-ms-input-placeholder {
+  color: #C4C4C4;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__input {
+    margin: 75px 0 0;
+  }
+}

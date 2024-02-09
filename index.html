@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="./images/logo.svg" alt="Логотип" class="logo">
+    </header>
+
+    <main>
+      <section class="profile">
+        <img src="./images/MyPhoto.jpg" alt="Моя фотография" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__name-edit">
+            <h1 class="profile__title">Эйсмонт Виктория</h1>
+            <button class="profile__edit-button" aria-label="Редактирование информации о себе" type="button"></button>
+          </div>
+          <p class="profile__subtitle">Начинающий разработчик</p>
+        </div>
+        <button class="profile__add-button" aria-label="Добавить" type="button"></button>
+      </section>
+      <section class="elements">
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">© 2020 Mesto Russia</p>
+    </footer>
+
+    <!-- Попап редактировать профиль -->
+    <div class="popup popup_type_edit">
+      <div class="popup__container">
+        <button class="popup__close popup__close_type_edit" aria-label="Закрыть окно" type="button"></button>
+        <form class="popup__form popup__form_type_edit" name="EditProfile" novalidate>
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <label>
+            <input class="popup__input popup__full-name" id="fullname" value="" name="FullName" type="text"
+              minlength="2" maxlength="40" required>
+            <span class="fullname-error popup__input-error"></span>
+          </label>
+          <label>
+            <input class="popup__input popup__about" id="infoaboutuser" value="" name="InfoAboutUser" type="text"
+              minlength="2" maxlength="200" required>
+            <span class="infoaboutuser-error popup__input-error"></span>
+          </label>
+          <button class="popup__save" type="submit" aria-label="Сохранить изменения">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Попап добавления карточки -->
+    <div class="popup popup_type_add">
+      <div class="popup__container popup__container_add">
+        <button class="popup__close popup__close_type_add" aria-label="Закрыть окно" type="button"></button>
+        <form class="popup__form popup__form_type_add" name="NewPlace" novalidate>
+          <h2 class="popup__title">Новое место</h2>
+          <label>
+            <input class="popup__input popup__name" id="placename" value="" name="PlaceName" placeholder="Название"
+              type="text" minlength="2" maxlength="30" required>
+            <span class="placename-error popup__input-error"></span>
+          </label>
+          <label>
+            <input class="popup__input popup__link" id="placelink" value="" name="PlaceLink"
+              placeholder="Ссылка на картинку" type="url" required>
+            <span class="placelink-error popup__input-error"></span>
+          </label>
+          <button class="popup__save" type="submit" aria-label="Сохранить изменения">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Попап просмотра карточки -->
+    <div class="popup popup_type_view">
+      <div class="popup__container popup__container_type_view">
+        <button class="popup__close popup__close_type_view" aria-label="Закрыть окно" type="button"></button>
+        <img src="#" class="popup__image" alt="">
+        <h2 class="popup__title popup__title_type_view"></h2>
+      </div>
+    </div>
+
+    <!-- Заготовка для карточки -->
+    <template id="element-template">
+      <div class="element">
+        <img src="#" alt="" class="element__photo">
+        <button class="element__delete" type="button" aria-label="Удалить карточку"></button>
+        <div class="element__group">
+          <h2 class="element__title"></h2>
+          <button class="element__like" aria-label="Отметить понравившуюся фотографию" type="button"></button>
+        </div>
+      </div>
+    </template>
+    <script type="module" src="./scripts/index.js"></script>
+  </div>
+</body>
+
+</html>

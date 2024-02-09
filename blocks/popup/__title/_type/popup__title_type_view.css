@@ -1,0 +1,9 @@
+.popup__title_type_view {
+  color: #FFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+  align-self: flex-start;
+}
